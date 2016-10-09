@@ -1,0 +1,30 @@
+source('scripts/grams-store.R')
+#
+biGrams <- data.frame(ng=character(),Freq=integer(), stringsAsFactors = FALSE)
+biGrams <- mergeGrams(biGrams, 'final/en_US/blogs2Grams.rds')
+biGrams <- mergeGrams(biGrams, 'final/en_US/news2Grams.rds')
+biGrams <- mergeGrams(biGrams, 'final/en_US/twitter2Grams.rds')
+saveRDS(biGrams, 'final/en_US/biGrams.rds')
+rm(biGrams)
+#
+triGrams <- data.frame(ng=character(),Freq=integer(), stringsAsFactors = FALSE)
+triGrams <- mergeGrams(triGrams, 'final/en_US/blogs3Grams.rds')
+triGrams <- mergeGrams(triGrams, 'final/en_US/news3Grams.rds')
+triGrams <- mergeGrams(triGrams, 'final/en_US/twitter3Grams.rds')
+saveRDS(triGrams, 'final/en_US/triGrams.rds')
+rm(triGrams)
+#
+quadGrams <- data.frame(ng=character(),Freq=integer(), stringsAsFactors = FALSE)
+quadGrams <- mergeGrams(quadGrams, 'final/en_US/blogs4Grams.rds')
+quadGrams <- mergeGrams(quadGrams, 'final/en_US/news4Grams.rds')
+quadGrams <- mergeGrams(quadGrams, 'final/en_US/twitter4Grams.rds')
+saveRDS(quadGrams, 'final/en_US/quadGrams.rds')
+rm(quadGrams)
+#
+pentaGrams <- data.frame(ng=character(),Freq=integer(), stringsAsFactors = FALSE)
+pentaGrams <- mergeGrams(pentaGrams, 'final/en_US/blogs5Grams.rds')
+pentaGrams <- mergeGrams(pentaGrams, 'final/en_US/news5Grams.rds')
+pentaGrams <- mergeGrams(pentaGrams, 'final/en_US/twitter5Grams.rds')
+saveRDS(pentaGrams, 'final/en_US/pentaGrams.rds')
+rm(pentaGrams)
+#
