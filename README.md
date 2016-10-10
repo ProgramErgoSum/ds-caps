@@ -18,3 +18,25 @@ Run `ngrams.R` to generate tokens. This file too sources the `tokenize-ngrams.R`
 - Set the variable `ngram` as 2 or 3 for bigrams, trigrams, etfc.
 - Repeat this for n = 2, 3, 4 and 5.
 - The result are files for n-grams per data set.
+
+### Generate n-grams store
+Run `allnGrams.R` to merge all the grams of a certain order.
+- Load all bigrams (output from previous step) for tweets, blogs and news.
+- Merge them into one large bigram dataset.
+- Repeat the same for other n-grams.
+- The result are files for one comprehensive data for a given n-gram.
+
+### Store the n-grams
+Run `saveToSQLLite.R` to save the grams data set into SQLLite data base. This file sources `grams-store.R` to do the following.
+- Load the output from previous step into a data frame.
+- Do some summary operations to obtain counts of words.
+- Write to a SQLLite databsase `SWIFT_KEY`.
+
+### Prediction
+Run `predict.R` to obtain predicted word and score.
+- Runs on top of `SWIFT_KEY` data base.
+- Takes input as a 4 word phrase.
+- Provides output as a predicted word.
+- Provides output as a table of possible candidates.
+
+
