@@ -39,4 +39,8 @@ Run `predict.R` to obtain predicted word and score.
 - Provides output as a predicted word.
 - Provides output as a table of possible candidates.
 
+### Shiny application
+The Shiny application details are as follows:
+- URL: https://programergosum.shinyapps.io/next-word/
+- Uses `server.R`, `ui.R`, `predict.R` and `SWIFT_KEY` database.
 
